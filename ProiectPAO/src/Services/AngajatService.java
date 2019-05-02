@@ -51,7 +51,7 @@ public class AngajatService {
         listaMedici[2] = new Medic("Ryan", "Reynolds", date1, 3300, "Pediatrie", 8 );
     }
 
-    public static void Autentificare() {
+    public void Autentificare() {
 
         System.out.println("Introduceti id-ul: ");
         Scanner input = new Scanner(System.in).useDelimiter("\\n");
@@ -74,7 +74,7 @@ public class AngajatService {
 
     }
 
-    public static int SchimbareParola() {
+    public int SchimbareParola() {
 
         System.out.println("Introduceti id-ul: ");
         Scanner input = new Scanner(System.in).useDelimiter("\\n");
@@ -121,29 +121,33 @@ public class AngajatService {
         return 0;
     }
 
-    public static void AngajatiAlfabetic(){
+    public void AngajatiAlfabetic(){
 
         List<Angajat> angajatiAlfabetic = new ArrayList<Angajat>();
         angajatiAlfabetic.addAll(Arrays.asList(listaAngajati));
         Collections.sort(angajatiAlfabetic);
+
+        System.out.println("Afisam angajatii in ordine alfabetica: ");
 
         for(int i = 0; i < angajatiAlfabetic.size(); i++)
             angajatiAlfabetic.get(i).afisareInfo();
 
     }
 
-    public static void AngajatiSalariuDescrescator() {
+    public void AngajatiSalariuDescrescator() {
 
         List<Angajat> angajatiSalariu = new ArrayList<Angajat>();
         angajatiSalariu.addAll(Arrays.asList(listaAngajati));
         Collections.sort(angajatiSalariu, new AngajatiSalariu());
+
+        System.out.println("Afisam angajatii in ordine descrescatoare, dupa salariu: ");
 
         for(int i = 0; i < angajatiSalariu.size(); i++)
             angajatiSalariu.get(i).afisareInfo();
 
     }
 
-    public static void NrSpecializariDiferite() {  //test Map
+    public void NrSpecializariDiferite() {  //test Map
 
         Medic test;
         Map<String, Medic> hm = new HashMap<String, Medic>();

@@ -1,6 +1,8 @@
 package Models;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
     protected String id;
     protected String password;
@@ -34,8 +36,20 @@ public class User {
     public void afisareInfo()
     {
         System.out.println("ID: " + id);
+        System.out.println("Parola: " + password);
     }
 
+    @Override
+    public String toString(){
+        StringBuilder text = new StringBuilder();
+        text.append("User{id='");
+        text.append(this.id);
+        text.append("\'");
+        text.append(",password='");
+        text.append(this.password);
+        text.append("\'}");
 
+        return text.toString();
+    }
 
 }

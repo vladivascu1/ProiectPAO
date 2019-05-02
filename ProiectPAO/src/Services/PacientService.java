@@ -69,7 +69,7 @@ public class PacientService {
 
     }
 
-    public static void PacientiAlfabetic() {
+    public void PacientiAlfabetic() {
 
         List<Pacient> pacientiAlfabetic = new ArrayList<Pacient>();
 
@@ -87,9 +87,9 @@ public class PacientService {
 
     }
 
-    public static void AfisarePacientiUnici() {
+    public void AfisarePacientiUnici() {
 
-        System.out.println("Afisam pacientii unici(internati sau nu): ");
+        System.out.println("Afisam pacientii unici(internati sau nu): riven");
 
         Set<Pacient> test = new HashSet<Pacient>();
 
@@ -104,7 +104,7 @@ public class PacientService {
 
     }
 
-    public static void PacientiDupaVarstaCrescator() {
+    public void PacientiDupaVarstaCrescator() {
 
         List<Pacient> pacientiVarsta = new ArrayList<Pacient>();
 
@@ -123,7 +123,7 @@ public class PacientService {
 
     }
 
-    public static void PacientiDupaDataExternare() {
+    public void PacientiDupaDataExternare() {
 
         List<PacientInternat> pacientidata = new ArrayList<PacientInternat>();
 
@@ -141,7 +141,7 @@ public class PacientService {
         }
     }
 
-    public static Pacient GasestePacient(String nume, String prenume) {
+    public Pacient GasestePacient(String nume, String prenume) {
 
         for (int i = 0; i < listaPacienti.length; i++)
             if(listaPacienti[i].getNume() == nume && listaPacienti[i].getPrenume() == prenume)
@@ -151,7 +151,7 @@ public class PacientService {
 
     }
 
-    public static Pacient GasestePacientCnp(String cnp) {
+    public Pacient GasestePacientCnp(String cnp) {
 
         for (int i = 0; i < listaPacienti.length; i++)
             if(listaPacienti[i].getCnp() == cnp)
@@ -161,7 +161,7 @@ public class PacientService {
 
     }
 
-    public static void PrescrieReteta(String nume, String prenume, Reteta reteta) {
+    public void PrescrieReteta(String nume, String prenume, Reteta reteta) {
 
         for (int i = 0; i < listaPacienti.length; i++)
             if(listaPacienti[i].getNume() == nume && listaPacienti[i].getPrenume() == prenume)
@@ -169,7 +169,7 @@ public class PacientService {
 
     }
 
-    public static void cautareDupaData() {
+    public void cautareDupaData() {
 
         System.out.println("Introduceti data(aaaa ll zz) si apasati tasta 'Enter': ");
         Scanner input = new Scanner(System.in).useDelimiter("\\n");

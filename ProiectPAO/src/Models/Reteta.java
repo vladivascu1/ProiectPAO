@@ -49,7 +49,7 @@ public class Reteta {
     }
 
     public void afisareInfoReteta() {
-        System.out.println("\nReteta : \n" + medicamente + "\nDoctor: " + doctor + "\nCasa asigurari: " + casaAsigurare);
+        System.out.println("\nNr reteta: " + nr + "\nReteta : " + medicamente + "\nDoctor: " + doctor + "\nCasa asigurari: " + casaAsigurare);
 
     }
 
