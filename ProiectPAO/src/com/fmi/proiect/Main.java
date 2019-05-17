@@ -2,11 +2,12 @@ package com.fmi.proiect;
 import Models.*;
 import Services.*;
 
+import java.sql.*;
 import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
  // Testam metodele din AngajatService :
 
@@ -147,6 +148,84 @@ public class Main {
         AuditService.getInstance().PacientiDupaDataExternareWrapper();
 
         */
+
+        /*
+        // TEST MEDIC JDBC
+
+        Calendar c2 = GregorianCalendar.getInstance();
+        c2.set(2000, Calendar.JUNE, 25);
+        java.util.Date data1 = c2.getTime();
+
+        Medic medic = new Medic("123", "parola", "Robert", "Doctorasul", data1, 300, "Neurochirurg", 34);
+        Medic medic2 = new Medic("1234", "parola", "Robert", "Doctorasul", data1, 300, "Neurochirurg", 34);
+
+        MedicJDBC.getInstance().CreateTableMedic();
+
+        MedicJDBC.getInstance().InsertMedic(medic);
+        MedicJDBC.getInstance().InsertMedic(medic2);
+
+        MedicJDBC.getInstance().UpdateMedic("nouaspec", 10000, "123");
+
+        MedicJDBC.getInstance().DeleteMedic("1234");
+
+        MedicJDBC.getInstance().ReadMedic();
+
+        */
+
+        /*
+
+        // TEST RETETA JDBC
+
+        Reteta reteta = new Reteta(1, "medicamentu suprem", "doctoru number one", "casa loco");
+        Reteta reteta2 = new Reteta(2, "medicamentu puternic", "doctoru smecher", "casa manelelor");
+
+        RetetaJDBC.getInstance().CreateReteta();
+        RetetaJDBC.getInstance().InsertReteta(reteta);
+        RetetaJDBC.getInstance().InsertReteta(reteta2);
+
+        RetetaJDBC.getInstance().ReadReteta();
+
+        RetetaJDBC.getInstance().UpdateReteta("QQQQQQ", "TTTT", 1);
+        RetetaJDBC.getInstance().DeleteReteta( 2);
+
+        RetetaJDBC.getInstance().ReadReteta();
+
+
+        */
+
+        /*
+
+        // TEST Angajat JDBC
+
+        Calendar calendar = GregorianCalendar.getInstance();
+        calendar.set(2006, Calendar.MARCH, 14);
+        java.util.Date date = calendar.getTime();
+
+
+        Angajat angajat = new Angajat("123", "parola", "Robert", "Angajatu", date, 3000);
+        Angajat angajat2 = new Angajat("12345", "parolita", "Robert", "Rupert", date, 5000);
+
+        AngajatJDBC.getInstance().CreateTableAngajat();
+
+        AngajatJDBC.getInstance().InsertAngajat(angajat);
+        AngajatJDBC.getInstance().InsertAngajat(angajat2);
+
+        System.out.println("Angajatii inainte de update & delete :");
+
+        AngajatJDBC.getInstance().ReadAngajat();
+
+        AngajatJDBC.getInstance().UpdateAngajat("56888", "10000", "123");
+
+        AngajatJDBC.getInstance().DeleteAngajat("12345");
+
+        System.out.println("Angajatii DUPA update & delete :");
+
+        AngajatJDBC.getInstance().ReadAngajat();
+
+
+        */
+
+
 
     }
 

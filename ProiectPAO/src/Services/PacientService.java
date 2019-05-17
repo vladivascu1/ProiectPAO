@@ -71,6 +71,8 @@ public class PacientService {
 
     public void PacientiAlfabetic() {
 
+        AuditService.getInstance().writeAuditLine("PacientiAlfabetic " + ", Thread: " + Thread.currentThread());
+
         List<Pacient> pacientiAlfabetic = new ArrayList<Pacient>();
 
         for (int i = 0; i < listaPacienti.length; i++) {
@@ -87,7 +89,26 @@ public class PacientService {
 
     }
 
+
+    public List<Pacient> PacientiAlfabeticList() {
+
+        AuditService.getInstance().writeAuditLine("PacientiAlfabeticList " + ", Thread: " + Thread.currentThread());
+
+        List<Pacient> pacientiAlfabetic = new ArrayList<Pacient>();
+
+        for (int i = 0; i < listaPacienti.length; i++) {
+            pacientiAlfabetic.add(listaPacienti[i]);
+        }
+
+        Collections.sort(pacientiAlfabetic);
+
+        return  pacientiAlfabetic;
+    }
+
+
     public void AfisarePacientiUnici() {
+
+        AuditService.getInstance().writeAuditLine("AfisarePacientiUnici " + ", Thread: " + Thread.currentThread());
 
         System.out.println("Afisam pacientii unici(internati sau nu): riven");
 
@@ -106,6 +127,8 @@ public class PacientService {
 
     public void PacientiDupaVarstaCrescator() {
 
+        AuditService.getInstance().writeAuditLine("PacientiDupaVarstaCrescator " + ", Thread: " + Thread.currentThread());
+
         List<Pacient> pacientiVarsta = new ArrayList<Pacient>();
 
         for (int i = 0; i < listaPacienti.length; i++) {
@@ -123,7 +146,28 @@ public class PacientService {
 
     }
 
+    public List<Pacient> PacientiDupaVarstaCrescatorList() {
+
+        AuditService.getInstance().writeAuditLine("PacientiDupaVarstaCrescatorList " + ", Thread: " + Thread.currentThread());
+
+        List<Pacient> pacientiVarsta = new ArrayList<Pacient>();
+
+        for (int i = 0; i < listaPacienti.length; i++) {
+            pacientiVarsta.add(listaPacienti[i]);
+        }
+
+
+        Collections.sort(pacientiVarsta, new PacientiVarsta());
+
+        return pacientiVarsta;
+
+
+    }
+
+
     public void PacientiDupaDataExternare() {
+
+        AuditService.getInstance().writeAuditLine("PacientiDupaDataExternare " + ", Thread: " + Thread.currentThread());
 
         List<PacientInternat> pacientidata = new ArrayList<PacientInternat>();
 
@@ -143,6 +187,8 @@ public class PacientService {
 
     public Pacient GasestePacient(String nume, String prenume) {
 
+        AuditService.getInstance().writeAuditLine("GasestePacient " + ", Thread: " + Thread.currentThread());
+
         for (int i = 0; i < listaPacienti.length; i++)
             if(listaPacienti[i].getNume() == nume && listaPacienti[i].getPrenume() == prenume)
                 return listaPacienti[i];
@@ -152,6 +198,8 @@ public class PacientService {
     }
 
     public Pacient GasestePacientCnp(String cnp) {
+
+        AuditService.getInstance().writeAuditLine("GasestePacientCnp " + ", Thread: " + Thread.currentThread());
 
         for (int i = 0; i < listaPacienti.length; i++)
             if(listaPacienti[i].getCnp() == cnp)
@@ -163,6 +211,8 @@ public class PacientService {
 
     public void PrescrieReteta(String nume, String prenume, Reteta reteta) {
 
+        AuditService.getInstance().writeAuditLine("PrescrieReteta " + ", Thread: " + Thread.currentThread());
+
         for (int i = 0; i < listaPacienti.length; i++)
             if(listaPacienti[i].getNume() == nume && listaPacienti[i].getPrenume() == prenume)
                listaPacienti[i].setReteta(reteta);
@@ -170,6 +220,8 @@ public class PacientService {
     }
 
     public void cautareDupaData() {
+
+        AuditService.getInstance().writeAuditLine("cautareDupaData " + ", Thread: " + Thread.currentThread());
 
         System.out.println("Introduceti data(aaaa ll zz) si apasati tasta 'Enter': ");
         Scanner input = new Scanner(System.in).useDelimiter("\\n");

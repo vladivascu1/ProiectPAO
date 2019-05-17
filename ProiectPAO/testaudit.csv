@@ -10,3 +10,28 @@ AngajatiSalariuDescrescator,2019/05/03 00:00:16
 AngajatiAlfabetic,2019/05/03 00:52:01
 AngajatiSalariuDescrescator,2019/05/03 00:52:01
 PacientiDupaDataExternare,2019/05/03 00:52:01
+[Ljava.lang.StackTraceElement;@2344fc66,2019/05/17 02:58:26
+AppMain , Thread: main,2019/05/17 02:59:59
+AppMain , Thread: main,2019/05/17 03:00:29
+AppMain , Thread: main, 2019/05/17 03:00:57
+AppMain , Thread: Thread[main,5,main], 2019/05/17 03:01:24
+AppMain , Thread: Thread[main,5,main], 2019/05/17 03:04:08
+ReadMedicList , Thread: Thread[SwingWorker-pool-1-thread-1,5,main], 2019/05/17 03:04:10
+AppMain , Thread: Thread[main,5,main], 2019/05/17 03:13:04
+ReadMedicList , Thread: Thread[SwingWorker-pool-1-thread-1,5,main], 2019/05/17 03:13:06
+PacientiAlfabeticList , Thread: Thread[SwingWorker-pool-1-thread-2,5,main], 2019/05/17 03:13:10
+PacientiDupaVarstaCrescatorList , Thread: Thread[SwingWorker-pool-1-thread-3,5,main], 2019/05/17 03:13:10
+AppMain , Thread: Thread[main,5,main], 2019/05/17 03:17:25
+AppMain: initFrame , Thread: Thread[AWT-EventQueue-0,6,main], 2019/05/17 03:17:25
+ReadMedicList , Thread: Thread[SwingWorker-pool-1-thread-1,5,main], 2019/05/17 03:17:27
+AppMain , Thread: Thread[main,5,main], 2019/05/17 03:20:26
+AppMain: initFrame , Thread: Thread[AWT-EventQueue-0,6,main], 2019/05/17 03:20:26
+PacientiAlfabeticList , Thread: Thread[SwingWorker-pool-1-thread-1,5,main], 2019/05/17 03:20:46
+PacientiDupaVarstaCrescatorList , Thread: Thread[SwingWorker-pool-1-thread-2,5,main], 2019/05/17 03:20:47
+AppMain , Thread: Thread[main,5,main], 2019/05/17 03:21:25
+AppMain: initFrame , Thread: Thread[AWT-EventQueue-0,6,main], 2019/05/17 03:21:25
+AppMain , Thread: Thread[main,5,main], 2019/05/17 03:21:35
+AppMain: initFrame , Thread: Thread[AWT-EventQueue-0,6,main], 2019/05/17 03:21:35
+ReadMedicList , Thread: Thread[SwingWorker-pool-1-thread-1,5,main], 2019/05/17 03:21:39
+DeleteMedic , Thread: Thread[AWT-EventQueue-0,6,main], 2019/05/17 03:21:44
+ReadMedicList , Thread: Thread[SwingWorker-pool-1-thread-2,5,main], 2019/05/17 03:21:46

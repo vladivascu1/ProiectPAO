@@ -12,15 +12,78 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class AuditService {
-    private static AuditService ourInstance = new AuditService();
+
+    private static FileWriter fileWriter;
     private static String CaleFisier = "testaudit.csv";
+
+    private static AuditService ourInstance = new AuditService();
+
+    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
 
     public static AuditService getInstance() {
         return ourInstance;
     }
 
+
     private AuditService() {
+
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+
+            public void run() {
+                // Do what you want when the application is stopping
+                closeFileWriter(fileWriter);
+            }
+        }));
+
+        fileWriter = openFileWriter();
+
     }
+
+
+    private FileWriter openFileWriter() {
+        FileWriter fileWriter = null;
+        try {
+            fileWriter = new FileWriter(CaleFisier, true);
+
+        }catch(IOException e){
+
+            e.printStackTrace();
+        }
+        return fileWriter;
+    }
+
+
+    private boolean closeFileWriter(FileWriter fileWriter) {
+        boolean result = false;
+        if(fileWriter != null) {
+            try {
+                fileWriter.flush();
+                fileWriter.close();
+                result = true;
+            } catch (IOException exc) {
+                exc.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+
+    public void writeAuditLine(String message) {
+
+        try {
+            fileWriter.write(message + ", ");
+
+            fileWriter.write(DATE_FORMAT.format(new Date()));
+            fileWriter.write("\n");
+            fileWriter.flush();
+        }catch(IOException e){
+
+            e.printStackTrace();
+        }
+    }
+
+
 
     public void AutentificareWrapper(){
 
@@ -257,7 +320,7 @@ public class AuditService {
             e.printStackTrace();
         }
 
-       return PacientService.getInstance().GasestePacient(nume, prenume);
+        return PacientService.getInstance().GasestePacient(nume, prenume);
 
     }
 
