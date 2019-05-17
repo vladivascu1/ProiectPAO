@@ -1,9 +1,7 @@
 package com.fmi.proiect;
 
-import Models.Medic;
-import Models.Pacient;
-import Services.MedicJDBC;
-import Services.PacientService;
+import models.Pacient;
+import services.PacientService;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

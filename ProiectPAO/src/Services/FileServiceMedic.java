@@ -1,14 +1,11 @@
-package Services;
+package services;
 
-import Models.Angajat;
-import Models.Medic;
+import models.Medic;
 
 import java.io.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 
 public class FileServiceMedic {
     private static FileServiceMedic ourInstance = new FileServiceMedic();

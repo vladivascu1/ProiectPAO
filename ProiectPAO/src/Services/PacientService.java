@@ -1,8 +1,8 @@
-package Services;
+package services;
 
-import Models.Pacient;
-import Models.PacientInternat;
-import Models.Reteta;
+import models.Pacient;
+import models.PacientInternat;
+import models.Reteta;
 
 import java.util.*;
 

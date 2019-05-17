@@ -1,7 +1,7 @@
 package com.fmi.proiect;
 
-import Models.Medic;
-import Services.MedicJDBC;
+import models.Medic;
+import services.MedicJDBC;
 
 import javax.swing.*;
 import java.awt.event.*;

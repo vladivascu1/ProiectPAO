@@ -1,6 +1,6 @@
-package Services;
+package services;
 
-import Models.*;
+import models.*;
 
 import java.util.*;
 

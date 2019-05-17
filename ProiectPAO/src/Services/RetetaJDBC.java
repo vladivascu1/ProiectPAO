@@ -1,6 +1,6 @@
-package Services;
+package services;
 
-import Models.Reteta;
+import models.Reteta;
 
 import java.sql.*;
 

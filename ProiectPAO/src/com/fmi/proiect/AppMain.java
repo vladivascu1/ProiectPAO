@@ -1,17 +1,14 @@
 package com.fmi.proiect;
 
-import Models.Medic;
-import Models.User;
-import Services.AuditService;
-import Services.MedicJDBC;
+import models.Medic;
+import services.AuditService;
+import services.MedicJDBC;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 

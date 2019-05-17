@@ -1,12 +1,9 @@
 package com.fmi.proiect;
 
-import Models.Medic;
-import Services.MedicJDBC;
+import services.MedicJDBC;
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class DeleteMedicBox extends JDialog {
     private JPanel contentPane;

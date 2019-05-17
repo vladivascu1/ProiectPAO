@@ -1,7 +1,6 @@
-package Models;
+package models;
 
 import java.util.Date;
-import java.util.Scanner;
 
 public class PacientInternat extends Pacient {
 

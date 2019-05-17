@@ -1,13 +1,10 @@
 package com.fmi.proiect;
 
-import Models.Medic;
-import Services.MedicJDBC;
+import services.MedicJDBC;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class CreateMedicBox extends JDialog {
     private JPanel contentPane;
